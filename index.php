@@ -98,11 +98,10 @@ include("conexion.php");
 						echo '
 						<tr>
 							<td>'.$no.'</td>
-							<td>'.$row['coddominio'].'</td>
-							<td><a href="edit.php?nik='.$row['coddominio'].'"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$row['nombredominio'].'</a></td>
+							<td style="visibility:hidden;">'.$row['coddominio'].'</td>
 							<td>'.$row['nombredominio'].'</td>
 							<td>'.$row['owner'].'</td>
-							<td>'.$row['codusuario'].'</td>
+							<td style="visibility:hidden;">'.$row['codusuario'].'</td>
 							<td>'.$row['nombreusuario'].'</td>
 							
 						</tr>
