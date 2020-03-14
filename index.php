@@ -78,12 +78,10 @@ include("conexion.php");
 			<div class="table-responsive">
 			<table class="table table-striped table-hover">
 				<tr>
-                    <th>No</th>
-					
-					<th>Nombre de Dominio</th>
-					<th>Owner</th>
-                   
-                    <th>Custodio de Información</th>
+                                   <th>No</th>
+				   <th>Nombre de Dominio</th>
+			           <th>Owner</th>
+                  		   <th>Custodio de Información</th>
 				</tr>
 				<?php
 				
@@ -101,7 +99,6 @@ include("conexion.php");
 							<td>'.$row['nombredominio'].'</td>
 							<td>'.$row['owner'].'</td>
 							<td>'.$row['nombreusuario'].'</td>
-							
 						</tr>
 						';
 						$no++;
