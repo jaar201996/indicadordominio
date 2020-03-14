@@ -41,6 +41,7 @@ include("conexion.php");
 				   <th>Nombre de Dominio</th>
 			           <th>Owner</th>
                   		   <th>Custodio de Información</th>
+			           <th>Indicador</th>
 				</tr>
 				<?php
 				
@@ -58,6 +59,9 @@ include("conexion.php");
 							<td>'.$row['nombredominio'].'</td>
 							<td>'.$row['owner'].'</td>
 							<td>'.$row['nombreusuario'].'</td>
+							<td>
+							    <a href="index.php?aksi1=insert&nik='.$row['coddominio'].'" title="Indicador" class="btn btn-success btn-sm"><span>Indicadores Dominio</span></a>
+							</td>
 						</tr>
 						';
 						$no++;
