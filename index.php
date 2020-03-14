@@ -79,10 +79,10 @@ include("conexion.php");
 			<table class="table table-striped table-hover">
 				<tr>
                     <th>No</th>
-					<th style="visibility:hidden;">Código</th>
+					
 					<th>Nombre de Dominio</th>
 					<th>Owner</th>
-                    <th style="visibility:hidden;">Código Usuario</th>
+                   
                     <th>Custodio de Información</th>
 				</tr>
 				<?php
@@ -98,10 +98,8 @@ include("conexion.php");
 						echo '
 						<tr>
 							<td>'.$no.'</td>
-							<td style="visibility:hidden;">'.$row['coddominio'].'</td>
 							<td>'.$row['nombredominio'].'</td>
 							<td>'.$row['owner'].'</td>
-							<td style="visibility:hidden;">'.$row['codusuario'].'</td>
 							<td>'.$row['nombreusuario'].'</td>
 							
 						</tr>
