@@ -60,7 +60,7 @@ include("conexion.php");
 							<td>'.$row['owner'].'</td>
 							<td>'.$row['nombreusuario'].'</td>
 							<td>
-							    <a href="index.php?aksi1=insert&nik='.$row['coddominio'].'" title="Indicador" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-new-window" aria-hidden="true">Ir</span></a>
+							    <a href="index.php?aksi1=insert&nik='.$row['coddominio'].'" title="Indicador" class="btn btn-success btn"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
 							</td>
 						</tr>
 						';
