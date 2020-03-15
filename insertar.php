@@ -56,7 +56,7 @@ Email	 	 : info@obedalvarado.pw
 				<div class="form-group">
 					<label class="col-sm-3 control-label" >Código</label>
 					<div class="col-sm-2">
-						<input type="text" disabled="true" name="codigo" class="form-control" placeholder="Código" required>
+						<input type="text" disabled="true" name="codigo" value="<?php echo $nik;?>" class="form-control" placeholder="Código" required>
 					</div>
 				</div>
 				<div class="form-group">
