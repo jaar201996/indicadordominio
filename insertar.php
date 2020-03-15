@@ -52,14 +52,13 @@ Email	 	 : info@obedalvarado.pw
 					$row = pg_fetch_assoc($sql);
 				}
 			?>
-			
-			<form class="form-horizontal" action="" method="post">
-				<div class="form-group">
-					<label class="col-sm-3 control-label" >Código</label>
+			<div >
+					<label class="col-sm-3 control-label" value="<?php echo $nik;?></label>
 					<div class="col-sm-4">
-						<input type="text" disabled="true" name="codigo" value="<?php echo $nik;?>" class="form-control" placeholder="Código" required>
+						<input type="text" disabled="true" name="codigo" >" class="form-control" placeholder="Código" required>
 					</div>
-				</div>
+		        </div>
+			<form class="form-horizontal" action="" method="post">
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
