@@ -50,17 +50,12 @@ Email	 	 : info@obedalvarado.pw
 	?>
 	<div class="container" >
 		<div class="content">
-			<h2>Elementos de Datos&raquo; <?php echo $row ['codigo']; ?></h2>
+			<h2>Elementos de Datos&raquo; <?php echo $nik; ?></h2>
 			<hr />
 
 			
 			<form class="form-horizontal" action="" method="post">
-				<div class="form-group">
-					<label class="col-sm-3 control-label" >Código</label>
-					<div class="col-sm-2">
-						<input type="text" disabled="true" name="codigo" class="form-control" placeholder="Código" required>
-					</div>
-				</div>
+				
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
