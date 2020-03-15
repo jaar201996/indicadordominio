@@ -35,6 +35,7 @@ Email	 	 : info@obedalvarado.pw
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
+		<?php include("nav.php");?>
 	</nav>
 	<?php
 			// escaping, additionally removing everything that could be (html/javascript-) code
