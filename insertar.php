@@ -59,8 +59,10 @@ Email	 	 : info@obedalvarado.pw
 			if(pg_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{
-				$row = pg_fetch_assoc($sql);
-				$coddominio=$row ['coddominio'];
+				while($row = pg_fetch_assoc($sql){
+				   $coddominio=$row ['coddominio'];
+				};
+				
 			}
 	               
 			
