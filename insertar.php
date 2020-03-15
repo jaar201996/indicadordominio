@@ -54,19 +54,10 @@ Email	 	 : info@obedalvarado.pw
 	
 	<?php
 			if(isset($_POST['add'])){
-				$numedident		     = pg_escape_string($dbconn,(strip_tags($_POST["numedident"],ENT_QUOTES)));//Escanpando caracteres 
-				$numedcident		     = pg_escape_string($dbconn,(strip_tags($_POST["numedcident"],ENT_QUOTES)));//Escanpando caracteres 
-				$edccatalog	 = pg_escape_string($dbconn,(strip_tags($_POST["edccatalog"],ENT_QUOTES)));//Escanpando caracteres 
-				$ednccatalog	 = pg_escape_string($dbconn,(strip_tags($_POST["ednccatalog"],ENT_QUOTES)));//Escanpando caracteres 
-				$rndefinidas	     = pg_escape_string($dbconn,(strip_tags($_POST["rndefinidas"],ENT_QUOTES)));//Escanpando caracteres 
-				$rnimplactejec		 = pg_escape_string($dbconn,(strip_tags($_POST["rnimplactejec"],ENT_QUOTES)));//Escanpando caracteres 
-				$rndesact		 = pg_escape_string($dbconn,(strip_tags($_POST["rndesact"],ENT_QUOTES)));//Escanpando caracteres 
-				$edtrazacatalog			 = pg_escape_string($dbconn,(strip_tags($_POST["edtrazacatalog"],ENT_QUOTES)));//Escanpando caracteres 
-				$edtrazafueracatalog			 = pg_escape_string($dbconn,(strip_tags($_POST["edtrazafueracatalog"],ENT_QUOTES)));//Escanpando caracteres 
 				$date = date("Y-m-d H:i:s");
 				
 						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
-															VALUES('$row ['coddominio']','$numedident', '$numedcident', '$edccatalog', '$ednccatalog', '$rndefinidas', '$rnimplactejec', '$rndesact','$edtrazacatalog','$date','$edtrazafueracatalog')") or die("Fallo en insertar");
+															VALUES('$row ['coddominio']','$_POST["numedident"]','$_POST["numedcident"]' , '$_POST["edccatalog"]', '$_POST["ednccatalog"]', '$_POST["rndefinidas"]', '$_POST["rnimplactejec"]', '$_POST["rndesact"]','$_POST["edtrazacatalog"]','$date','$_POST["edtrazafueracatalog"]')") or die("Fallo en insertar");
 						if($insert){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho! Los datos han sido guardados con éxito.</div>';
 						}else{
