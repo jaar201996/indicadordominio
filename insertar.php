@@ -58,7 +58,7 @@ Email	 	 : info@obedalvarado.pw
 			
 			<form class="form-horizontal" action="" method="post">
 				<div class="form-group">
-					<label class="col-sm-3 control-label">ED identificados</label>
+					<label class="col-sm-3 control-label">Fecha</label>
 					<div class="col-sm-2">
 						<input type="text" class="form-control"  disabled="true" value="<?php echo $hoy;?>"/>
 					</div>
