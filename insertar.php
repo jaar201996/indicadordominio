@@ -53,7 +53,7 @@ Email	 	 : info@obedalvarado.pw
 				}
 			?>
 			<div >
-					<label class="col-sm-3 control-label" value="<?php echo $nik;?></label>
+					<label class="col-sm-3 control-label" value="<?php echo $nik;?>"></label>
 					<div class="col-sm-4">
 						<input type="text" disabled="true" name="codigo" >" class="form-control" placeholder="Código" required>
 					</div>
