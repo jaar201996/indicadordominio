@@ -37,9 +37,20 @@ Email	 	 : info@obedalvarado.pw
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<?php include("nav.php");?>
 	</nav>
+	<?php
+			// escaping, additionally removing everything that could be (html/javascript-) code
+			$nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
+			$sql =  pg_query($dbconn, "SELECT * FROM dominio WHERE nombredominio='$nik'");
+			if(pg_num_rows($sql) == 0){
+				header("Location: index.php");
+			}else{
+				$row = pg_fetch_assoc($sql);
+			}
+			
+	?>
 	<div class="container" >
 		<div class="content">
-			<h2>Elementos de Datos&raquo; Ingresar Cantidad</h2>
+			<h2>Elementos de Datos&raquo; <?php echo $row ['codigo']; ?></h2>
 			<hr />
 
 			
