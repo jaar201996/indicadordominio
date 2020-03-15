@@ -77,7 +77,7 @@ Email	 	 : info@obedalvarado.pw
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
-						<input type="number"  class="form-control" value="<?php echo $coddominio;?>"required onkeypress='return validaNumericos(event)'/>
+						<input type="text"  class="form-control" value="<?php echo $coddominio;?>"required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
