@@ -38,6 +38,19 @@ Email	 	 : info@obedalvarado.pw
 		<?php include("nav.php");?>
 	</nav>
 	<?php
+			if(isset($_POST['add'])){
+				$date = date("Y-m-d H:i:s");
+				
+						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
+															VALUES('$row ['coddominio']','$_POST[numedident]','$_POST[numedcident]' , '$_POST[edccatalog]', '$_POST[ednccatalog]', '$_POST[rndefinidas]', '$_POST[rnimplactejec]', '$_POST[rndesact]','$_POST[edtrazacatalog]','$date','$_POST[ednccatalog]')") or die("Fallo en insertar");
+						if($insert){
+							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho! Los datos han sido guardados con éxito.</div>';
+						}else{
+							echo '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Error. No se pudo guardar los datos !</div>';
+						}
+			}
+        ?>
+	<?php
 			// escaping, additionally removing everything that could be (html/javascript-) code
 			date_default_timezone_set('America/Lima');
 			$hoy =date("Y-m-d");
