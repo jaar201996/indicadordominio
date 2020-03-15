@@ -41,13 +41,22 @@ Email	 	 : info@obedalvarado.pw
 		<div class="content">
 			<h2>Elementos de Datos&raquo; Ingresar Cantidad</h2>
 			<hr />
-
+			<?php
+				// escaping, additionally removing everything that could be (html/javascript-) code
+				$nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
+				$sql =  pg_query($dbconn, "SELECT * FROM dominio WHERE nombredominio='$nik'");
+				if(pg_num_rows($sql) == 0){
+					header("Location: index.php");
+				}else{
+					$row = pg_fetch_assoc($sql);
+				}
+			?>
 			
 			<form class="form-horizontal" action="" method="post">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" >Código</label>
 					<div class="col-sm-2">
-						<input type="text" disabled="true" name="codigo" class="form-control" placeholder="Código" required>
+						<input type="text" disabled="true" value="<?php echo $nik" name="codigo" class="form-control" placeholder="Código" required>
 					</div>
 				</div>
 				<div class="form-group">
