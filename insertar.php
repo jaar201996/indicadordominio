@@ -39,7 +39,9 @@ Email	 	 : info@obedalvarado.pw
 	</nav>
 	<?php
 			// escaping, additionally removing everything that could be (html/javascript-) code
-			$nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
+			date_default_timezone_set('America/Lima');
+			$hoy =date("Y-m-d");
+	                $nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
 			$sql =  pg_query($dbconn, "SELECT * FROM dominio WHERE nombredominio='$nik'");
 			if(pg_num_rows($sql) == 0){
 				header("Location: index.php");
@@ -55,7 +57,12 @@ Email	 	 : info@obedalvarado.pw
 
 			
 			<form class="form-horizontal" action="" method="post">
-				
+				<div class="form-group">
+					<label class="col-sm-3 control-label">ED identificados</label>
+					<div class="col-sm-2">
+						<input type="text" class="form-control"  disabled="true" value="<?php echo $hoy;?>"/>
+					</div>
+				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
