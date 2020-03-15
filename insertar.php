@@ -67,55 +67,55 @@ Email	 	 : info@obedalvarado.pw
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
-						<input type="text"  class="form-control" value="<?php echo $row ['coddominio']; ?>" required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="numedident" class="form-control" value="<?php echo $row ['coddominio']; ?>" required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">EDC identificados</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control" required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="numedcident" class="form-control" required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED con DN* en el Catalog</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control" required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="edccatalog" class="form-control" required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">EDNC con DN* en el Catalog</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control"  required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="ednccatalog"  class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Reglas de Negocio Definidas</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control"  required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="rndefinidas"  class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">RN* Implementadas, Activas y Ejecutando</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control"  required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="rnimplactejec" class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">RN* Implementadas que fueron desactivadas</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control" required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="rndesact" class="form-control" required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED con Trazabilidad en el Catalog</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control"  required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="edtrazacatalog"  class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED con Trazabilidad fuera del Catalog</label>
 					<div class="col-sm-2">
-						<input type="number" class="form-control"  required onkeypress='return validaNumericos(event)'/>
+						<input type="number" name="edtrazafueracatalog" class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>		
 				<div class="form-group">
