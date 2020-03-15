@@ -48,16 +48,19 @@ Email	 	 : info@obedalvarado.pw
 			}else{
 				$row = pg_fetch_assoc($sql);
 			}
+	               
+			
+	?>
+	<?php
 	                $result = pg_query($dbconn, "SELECT * FROM dominio where nombredominio='$nik'");
 			if(pg_num_rows ($result) == 0){
-					echo '<tr><td colspan="8">No hay datos.</td></tr>';
+					header("Location: index.php");
 		        }else{
 				while($row = pg_fetch_assoc($result)){
 						$coddominio=row['$coddominio'];
 		            	}
 			}
-			
-	?>
+        ?>
 	<div class="container" >
 		<div class="content">
 			<h2>Elementos de Datos&raquo; <?php echo $nik; ?></h2>
