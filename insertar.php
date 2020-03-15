@@ -20,6 +20,7 @@ Email	 	 : info@obedalvarado.pw
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.css" rel="stylesheet">
 	<link href="css/style_nav.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script
 	<style>
 		.content {
 			margin-top: 80px;
@@ -54,7 +55,7 @@ Email	 	 : info@obedalvarado.pw
 			
 			<form class="form-horizontal" action="" method="post">
 				<div class="form-group">
-					<label class="col-sm-3 control-label" >Código</label>
+					<label class="col-sm-12 control-label" >Código</label>
 					<div class="col-sm-2">
 						<input type="text" disabled="true" name="codigo" value="<?php echo $nik;?>" class="form-control" placeholder="Código" required>
 					</div>
