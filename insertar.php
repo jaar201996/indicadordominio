@@ -51,16 +51,6 @@ Email	 	 : info@obedalvarado.pw
 	               
 			
 	?>
-	<?php
-	                $result = pg_query($dbconn, "SELECT * FROM dominio where nombredominio='$nik'");
-			if(pg_num_rows ($result) == 0){
-					header("Location: index.php");
-		        }else{
-				while($row = pg_fetch_assoc($result)){
-						$coddominio=row['$coddominio'];
-		            	}
-			}
-        ?>
 	<div class="container" >
 		<div class="content">
 			<h2>Elementos de Datos&raquo; <?php echo $nik; ?></h2>
@@ -77,7 +67,7 @@ Email	 	 : info@obedalvarado.pw
 				<div class="form-group">
 					<label class="col-sm-3 control-label">ED identificados</label>
 					<div class="col-sm-2">
-						<input type="text"  class="form-control" value="<?php echo $coddominio;?>"required onkeypress='return validaNumericos(event)'/>
+						<input type="text"  class="form-control" value="<?php echo $row ['coddominio']; ?>" required onkeypress='return validaNumericos(event)'/>
 					</div>
 				</div>
 				<div class="form-group">
