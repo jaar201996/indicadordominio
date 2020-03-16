@@ -42,7 +42,7 @@ Email	 	 : info@obedalvarado.pw
 				$date = date("Y-m-d H:i:s");
 				
 						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
-															VALUES('$row ['$coddominio','$_POST[numedident]','$_POST[numedcident]' , '$_POST[edccatalog]', '$_POST[ednccatalog]', '$_POST[rndefinidas]', '$_POST[rnimplactejec]', '$_POST[rndesact]','$_POST[edtrazacatalog]','$date','$_POST[ednccatalog]')") or die(pg_last_error($dbconn));
+															VALUES('$row ['coddominio']','$_POST[numedident]','$_POST[numedcident]' , '$_POST[edccatalog]', '$_POST[ednccatalog]', '$_POST[rndefinidas]', '$_POST[rnimplactejec]', '$_POST[rndesact]','$_POST[edtrazacatalog]','$date','$_POST[ednccatalog]')") or die(pg_last_error($dbconn));
 						if($insert){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho! Los datos han sido guardados con éxito.</div>';
 						}else{
@@ -56,13 +56,14 @@ Email	 	 : info@obedalvarado.pw
 			date_default_timezone_set('America/Lima');
 			$hoy =date("Y-m-d");
 	                $nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
-			$resultado = ingres_query($dbconn, "SELECT * FROM dominio WHERE nombredominio='$nik'"); 
+			$sql = pg_query($dbconn, "SELECT * FROM dominio WHERE nombredominio='$nik'");
 			
-			if(pg_num_rows($resultado) == 0){
+			if(pg_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{
-				$resultado = ingres_fetch_array($resultado);
-           		        $coddominio = $resultado["coddominio"];			
+				while($row = pg_fetch_assoc($sql){
+				   $coddominio=$row ['coddominio'];
+				}			
 			}
        ?>
 	
