@@ -61,7 +61,7 @@ Email	 	 : info@obedalvarado.pw
 				header("Location: index.php");
 			}else{
 				while($row = pg_fetch_assoc($sql)){
-				   $coddominio=$row ['coddominio'];
+				   $coddominio=$row ["coddominio"];
 				}			
 			}
        ?>
