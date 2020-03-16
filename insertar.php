@@ -62,7 +62,7 @@ Email	 	 : info@obedalvarado.pw
 			}else{
 				while($row = pg_fetch_assoc($sql){
 				   $coddominio=$row ['coddominio'];
-				}
+				};
 			}
 	?>
 	
