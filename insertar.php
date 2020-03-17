@@ -22,7 +22,7 @@ Email	 	 : info@obedalvarado.pw
 	<link href="css/style_nav.css" rel="stylesheet">
 	<style>
 		.content {
-			margin-top: 20px;
+			margin-top: 80px;
 			margin-left: 250px;
 		}
 
