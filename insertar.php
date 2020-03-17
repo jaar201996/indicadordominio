@@ -42,7 +42,7 @@ Email	 	 : info@obedalvarado.pw
 				$date = date("Y-m-d H:i:s");
 				
 						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
-															VALUES('$coddominio',
+															VALUES('$nik',
 															       '$_POST[numedident]',
 															       '$_POST[numedcident]', 
 															       '$_POST[edccatalog]',
