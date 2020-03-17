@@ -34,6 +34,9 @@ Email	 	 : info@obedalvarado.pw
 	<![endif]-->
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<?php include('nav.php');?>
+	</nav>
 	<?php
 			if(isset($_POST['add'])){
 				$date = date("Y-m-d H:i:s");
