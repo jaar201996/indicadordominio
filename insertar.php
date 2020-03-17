@@ -39,6 +39,7 @@ Email	 	 : info@obedalvarado.pw
 	</nav>
 	<?php
 			if(isset($_POST['add'])){
+				date_default_timezone_set('America/Lima');
 				$date = date("Y-m-d H:i:s");
 				
 						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
