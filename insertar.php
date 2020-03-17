@@ -43,16 +43,16 @@ Email	 	 : info@obedalvarado.pw
 				
 						$insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
 															VALUES('$coddominio',
-															       '$_POST["numedident"]',
-															       '$_POST["numedcident"]', 
-															       '$_POST["edccatalog"]',
-															        '$_POST["ednccatalog"]', 
-															        '$_POST["rndefinidas"]', 
-															        '$_POST["rnimplactejec"]', 
-															        '$_POST["rndesact"]',
-															        '$_POST["edtrazacatalog"]',
+															       '$_POST[numedident]',
+															       '$_POST[numedcident]', 
+															       '$_POST[edccatalog]',
+															        '$_POST[ednccatalog]', 
+															        '$_POST[rndefinidas]', 
+															        '$_POST[rnimplactejec]', 
+															        '$_POST[rndesact]',
+															        '$_POST[edtrazacatalog]',
 															        '$date',
-															        '$_POST["edtrazafueracatalog"]')") or die(pg_last_error($dbconn));
+															        '$_POST[edtrazafueracatalog]')") or die(pg_last_error($dbconn));
 						if($insert){
 							echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Bien hecho! Los datos han sido guardados con éxito.</div>';
 						}else{
