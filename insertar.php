@@ -64,8 +64,8 @@ Email	 	 : info@obedalvarado.pw
 			// escaping, additionally removing everything that could be (html/javascript-) code
 			date_default_timezone_set('America/Lima');
 			$hoy =date("Y-m-d");
-	                $id =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
-			$sql = pg_query($dbconn, "SELECT * FROM dominio WHERE coddominio='$id'");		
+	                $nik =pg_escape_string($dbconn,(strip_tags($_GET["nik"],ENT_QUOTES)));
+			$sql = pg_query($dbconn, "SELECT * FROM dominio WHERE coddominio='$nik'");		
 			if(pg_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{
