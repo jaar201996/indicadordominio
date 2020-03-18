@@ -169,13 +169,18 @@ Email	 	 : info@obedalvarado.pw
 				var datos=$('#formIndicador').serialize();
 				$.ajax({
 					type:"POST",
-					url:"insert.php",
+					url:"insert.php?nik='$_GET[nik]'",
 					data:datos,
 					success:function(r){
-						if(r==1){
-							alert("agregado con exito");
+						if(r!=1){
+							 Swal.fire({
+							   	type:'error',
+							   	title:'Error al guardar datos',
+					                 });
 						}else{
-							alert("Fallo el server");
+							 type:'success',
+			                   		title:'Registro exitoso',
+			                   		confirmButtonText:'Ingresar',
 						}
 					}
 				});
