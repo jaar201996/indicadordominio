@@ -11,9 +11,12 @@ $('#formIndicador').submit(function (e){
    var edtrazafueracatalog =  $.trim($("#edtrazafueracatalog").val());
   
       console.log(numedident.length );
-    if(numedident.lenght == "" || numedcident.lenght == ""  || edccatalog.lenght == ""  || ednccatalog.lenght == "" 
-       || rndefinidas.lenght == "" || rnimplactejec.lenght == "" || rndesact.lenght == ""  || edtrazacatalog.lenght == ""
-       || edtrazafueracatalog.lenght == "" ){
-
-   }
+    if(numedident.length == "" || numedcident.length == ""  || edccatalog.length == ""  || ednccatalog.length == "" 
+       || rndefinidas.length == "" || rnimplactejec.length == "" || rndesact.length == ""  || edtrazacatalog.length == ""
+       || edtrazafueracatalog.length == "" ){
+               Swal.fire({
+                   type:'warning',
+                   title:'Debe ingresar valores',
+      })
+   } 
 });
