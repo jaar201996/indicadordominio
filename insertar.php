@@ -154,9 +154,11 @@ Email	 	 : info@obedalvarado.pw
 							   	title:'Error al guardar datos',
 					                 });
 						}else{
-							 type:'success',
-			                   		title:'Registro exitoso',
-			                   		confirmButtonText:'Ingresar',
+							 Swal.fire({
+								 type:'success',
+								 title:'Registrado correctamente',
+								 confirmButtonText:'Ingresar',
+     				                         });
 						}
 					}
 				});
