@@ -14,5 +14,4 @@
 															        '$_POST[edtrazacatalog]',
 															        '$date',
 															        '$_POST[edtrazafueracatalog]')") or die(pg_last_error($dbconn));
-         }
 ?>
