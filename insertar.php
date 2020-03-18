@@ -79,8 +79,6 @@ Email	 	 : info@obedalvarado.pw
 		<div class="content">
 			<h2>Elementos de Datos&raquo; <?php echo $row ['nombredominio']; ?></h2>
 			<hr />
-
-			
 			<form class="form-horizontal" id="formIndicador" action="" method="post">
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Fecha</label>
@@ -145,7 +143,7 @@ Email	 	 : info@obedalvarado.pw
 				<div class="form-group">
 					<label class="col-sm-2 control-label">&nbsp;</label>
 					<div class="col">
-						<input type="submit" name="add" class="btn btn btn-primary" value="Guardar datos">
+						<input id="btnguardar" type="submit" name="add" class="btn btn btn-primary" value="Guardar datos">
 						<a href="index.php" class="btn btn btn-danger">Cancelar</a>
 					</div>
 				</div>
@@ -166,6 +164,27 @@ Email	 	 : info@obedalvarado.pw
             }
           return false;         
          }
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnguardar').click(function(){
+				var datos=$('#formIndicador').serialize();
+				$.ajax({
+					type:"POST",
+					url:"insertar.php",
+					data:datos,
+					success:function(r){
+						if(r==1){
+							alert("agregado con exito");
+						}else{
+							alert("Fallo el server");
+						}
+					}
+				});
+
+				return false;
+			});
+		});
 	</script>
 </body>
 </html>
