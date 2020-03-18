@@ -17,6 +17,36 @@ $('#formIndicador').submit(function (e){
                Swal.fire({
                    type:'warning',
                    title:'Debe ingresar valores',
-      })
+               });
+      return false;
+   }else {
+
+        $.ajax({
+        		url:"indicador.php",
+        		type:"POST",
+        		datatype:"json",
+        		data: {numedident:numedident,numedcident:numedcident,edccatalog:edccatalog,ednccatalog:ednccatalog,rndefinidas:rndefinidas,rnimplactejec:rnimplactejec,
+        			rndesact:rndesact,dtrazacatalog:dtrazacatalog,edtrazafueracatalog:edtrazafueracatalog},
+        		success: function(data){
+
+                   if(data==null){
+                   	   Swal.fire({
+			                   type:'error',
+			                   title:'Debe 12 ingresar valores',
+     				         });
+                   }else{
+                   	  Swal.fire({
+			                   type:'success',
+			                   title:'Conexion correcta',
+			                   confirmButtonText:'Ingresar',
+     				         }).then((result) => {
+                            if(result.value){
+                              window.location.href="index.php";
+                            }
+     				          }
+     				       )
+                   }
+        		}
+        });
    } 
 });
