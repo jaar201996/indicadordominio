@@ -154,7 +154,6 @@ Email	 	 : info@obedalvarado.pw
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="jquery/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script type="text/javascript">
 		function validaNumericos(event) {
