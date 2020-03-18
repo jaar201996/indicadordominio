@@ -10,7 +10,7 @@ $('#formIndicador').submit(function (e){
    var edtrazacatalog =  $.trim($("#edtrazacatalog").val());
    var edtrazafueracatalog =  $.trim($("#edtrazafueracatalog").val());
   
-      console.log(numedident.lenght );
+      console.log(numedident.length );
     if(numedident.lenght == "" || numedcident.lenght == ""  || edccatalog.lenght == ""  || ednccatalog.lenght == "" 
        || rndefinidas.lenght == "" || rnimplactejec.lenght == "" || rndesact.lenght == ""  || edtrazacatalog.lenght == ""
        || edtrazafueracatalog.lenght == "" ){
