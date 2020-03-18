@@ -14,7 +14,7 @@ $('#formIndicador').submit(function (e){
        Swal.fire({
                    type:'warning',
                    title:'Debe ingresar valores',
-                 })
+                 });
 
    }
 });
