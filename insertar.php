@@ -158,11 +158,6 @@ Email	 	 : info@obedalvarado.pw
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/form.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-	<script>
-	$('.date').datepicker({
-		format: 'dd-mm-yyyy',
-	})
-	</script>
 	<script type="text/javascript">
 		function validaNumericos(event) {
            if(event.charCode >= 48 && event.charCode <= 57){
