@@ -157,6 +157,7 @@ Email	 	 : info@obedalvarado.pw
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script src="js/form.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	<script>
 	$('.date').datepicker({
 		format: 'dd-mm-yyyy',
