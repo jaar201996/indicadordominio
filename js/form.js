@@ -9,6 +9,12 @@ $('#formIndicador').submit(function (e){
    var rndesact =  $.trim($("#rndesact").val());
    var edtrazacatalog =  $.trim($("#edtrazacatalog").val());
    var edtrazafueracatalog =  $.trim($("#edtrazafueracatalog").val());
+  
+    if(numedident.lenght == "" || numedcident.lenght == ""  || edccatalog.lenght == ""  || ednccatalog.lenght == "" || rndefinidas.lenght == "" || rnimplactejec.lenght == "" || rndesact.lenght == ""  || edtrazacatalog.lenght == "" || edtrazafueracatalog.lenght == "" ){
+       Swal.fire({
+                   type:'warning',
+                   title:'Debe ingresar valores',
+                 })
 
-  alert(numedident);
+   }
 });
