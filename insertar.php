@@ -170,7 +170,7 @@ Email	 	 : info@obedalvarado.pw
 				var datos=$('#formIndicador').serialize();
 				$.ajax({
 					type:"POST",
-					url:"insertar.php",
+					url:"insert.php",
 					data:datos,
 					success:function(r){
 						if(r==1){
