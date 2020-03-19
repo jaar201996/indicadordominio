@@ -1,7 +1,7 @@
 <?php 
 	 include("conexion.php");
          date_default_timezone_set('America/Lima');
-         $date = date("Y-m-d H:i:s");
+         $date = date("Y-m-d");
           $insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
 															VALUES('$_POST[coddominio]',
 															       '$_POST[numedident]',
