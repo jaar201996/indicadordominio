@@ -3,7 +3,7 @@
          date_default_timezone_set('America/Lima');
          $date = date("Y-m-d H:i:s");
           $insert = pg_query($dbconn, "INSERT INTO indicador(coddominio, numedident, numedcident, edccatalog, ednccatalog, rndefinidas, rnimplactejec, rndesact,edtrazacatalog,fecactual,edtrazafueracatalog)
-															VALUES('$_POST[coddominio]',
+															VALUES('1',
 															       '$_POST[numedident]',
 															       '$_POST[numedcident]', 
 															       '$_POST[edccatalog]',
