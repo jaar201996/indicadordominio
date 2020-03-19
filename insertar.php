@@ -114,6 +114,11 @@ Email	 	 : info@obedalvarado.pw
 					<label class="col-sm-3 control-label">ED con Trazabilidad fuera del Catalog</label>
 					<div class="col-sm-2">
 						<input type="number" id="edtrazafueracatalog" name="edtrazafueracatalog" class="form-control" required onkeypress='return validaNumericos(event)'/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">ED con Trazabilidad fuera del Catalog</label>
+					<div class="col-sm-2">
 					       <input type="number" id="coddominio" type="hidden" name="coddominio"  class="form-control" value="<?php echo $nik;?>">
 					</div>
 				</div>		
