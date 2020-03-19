@@ -76,9 +76,12 @@ include("conexion.php");
 				</tr>
 				<?php
 				
-					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario order by
-			    b.nombreusuario");
-				
+			         if($filter){
+					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario where a.nombredomini='$filter'order by b.nombreusuario");
+				 }else{
+					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario 
+					order by b.nombreusuario");
+				}
 				if(pg_num_rows ($result) == 0){
 					echo '<tr><td colspan="8">No hay datos.</td></tr>';
 				}else{
