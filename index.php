@@ -21,6 +21,11 @@ include("conexion.php");
 		.content {
 			margin-top: 80px;
 		}
+		#div1 {
+                    overflow:scroll;
+     		    height:200px;
+     		    width:500px;
+               }
 	</style>
 
 
@@ -65,7 +70,7 @@ include("conexion.php");
 				</div>
 			</form>
 			<br />
-			<div class="table-responsive">
+			<div class="table-responsive" id="div1">
 			<table class="table table-striped table-hover">
 				<tr>
                                    <th>No</th>
