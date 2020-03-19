@@ -114,7 +114,7 @@ Email	 	 : info@obedalvarado.pw
 					<label class="col-sm-3 control-label">ED con Trazabilidad fuera del Catalog</label>
 					<div class="col-sm-2">
 						<input type="number" id="edtrazafueracatalog" name="edtrazafueracatalog" class="form-control" required onkeypress='return validaNumericos(event)'/>
-					       <input type="number" id="coddominio" class="form-control" value="<?php echo $nik;?>"/>
+					       <input type="number" id="coddominio" name="coddominio"  class="form-control" value="<?php echo $nik;?>"/>
 					</div>
 				</div>		
 				<div class="form-group">
@@ -167,7 +167,7 @@ Email	 	 : info@obedalvarado.pw
 					url:"insert.php",
 					data:datos,
 					success:function(r){
-						if(r!=1){
+						if(r==1){
 							 Swal.fire({
 							   	type:'error',
 							   	title:'Error al guardar datos',
