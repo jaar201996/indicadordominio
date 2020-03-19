@@ -75,7 +75,7 @@ Email	 	 : info@obedalvarado.pw
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">ED con DN* en el Catalog</label>
+					<label class="col-sm-3 control-label">EDC con DN* en el Catalog</label>
 					<div class="col-sm-2">
 						<input type="number" id="edccatalog"  name="edccatalog" class="form-control"  required onkeypress='return validaNumericos(event)'/>
 					</div>
@@ -117,7 +117,11 @@ Email	 	 : info@obedalvarado.pw
 				                <input type="hidden" id="coddominio" type="hidden" name="coddominio"  class="form-control" value="<?php echo $nik;?>">
 	
 					</div>
-				</div>	
+				</div>
+				<div>
+				  <label class="col-sm-3 control-label">*DN=Diccionario de Negocio</label>
+				   <label class="col-sm-3 control-label">*RN=Regla de Negocio</label>
+				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">&nbsp;</label>
 					<div class="col">
