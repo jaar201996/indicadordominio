@@ -23,8 +23,8 @@ include("conexion.php");
 		}
 		#div1 {
                     overflow:scroll;
-     		    height:200px;
-     		    width:500px;
+     		    height:500px;
+     		    width:800px;
                }
 	</style>
 
