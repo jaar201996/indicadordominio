@@ -38,7 +38,7 @@ include("conexion.php");
 					<select name="filter" class="form-control" onchange="form.submit()">
 						<option value="0">Filtros de datos de dominio</option>
 						<?php $filter = (isset($_GET['filter']) ? strtolower($_GET['filter']) : NULL);  ?>
-						<option value="1" <?php if($filter == 'ADR'){ echo 'selected'; } ?>>ADR</option>
+						<option value="6" <?php if($filter == 'ADR'){ echo 'selected'; } ?>>ADR</option>
 						<option value="2" <?php if($filter == 'ALM'){ echo 'selected'; } ?>>ALM</option>
 						<option value="3" <?php if($filter == 'Anallytics'){ echo 'selected'; } ?>>Anallytics</option>
 						<option value="4" <?php if($filter == 'Canales Digitales para Empresas'){ echo 'selected'; } ?>>Canales Digitales para Empresas</optio>
@@ -77,7 +77,7 @@ include("conexion.php");
 				<?php
 				
 			         if($filter){
-					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario where a.nombredomini='$filter'order by b.nombreusuario");
+					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario where a.nombredominio='$filter'order by b.nombreusuario");
 				 }else{
 					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario 
 					order by b.nombreusuario");
