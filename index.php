@@ -24,7 +24,7 @@ include("conexion.php");
 		#div1 {
                     overflow:scroll;
      		    height:500px;
-     		    width:800px;
+     		    width:1000px;
                }
 	</style>
 
