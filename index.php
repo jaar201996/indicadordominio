@@ -77,7 +77,7 @@ include("conexion.php");
 				<?php
 				
 			         if($filter){
-					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario where a.nombredominio='$filter'order by b.nombreusuario");
+					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario where a.coddominio='$filter'order by b.nombreusuario");
 				 }else{
 					$result = pg_query($dbconn, "SELECT a.*, b.nombreusuario FROM dominio a join usuario b on a.codusuario = b.codusuario 
 					order by b.nombreusuario");
