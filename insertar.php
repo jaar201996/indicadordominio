@@ -176,7 +176,7 @@ Email	 	 : info@obedalvarado.pw
 							 Swal.fire({
 								 type:'success',
 								 title:'Registrado correctamente',
-								 confirmButtonText:'Ingresar',
+								 confirmButtonText:'Ok',
      				                         });
 						}
 					  }
