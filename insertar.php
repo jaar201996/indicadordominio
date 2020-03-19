@@ -164,7 +164,7 @@ Email	 	 : info@obedalvarado.pw
    				}else {
 				    $.ajax({
 					type:"POST",
-					url:"insert.php?nik='$_GET[nik]'",
+					url:"insert.php",
 					data:datos,
 					success:function(r){
 						if(r!=1){
