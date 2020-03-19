@@ -22,6 +22,7 @@ include("conexion.php");
 			margin-top: 80px;
 		}
 		#div1 {
+	            margin-left: 50px;
                     overflow:scroll;
      		    height:500px;
      		    width:1000px;
