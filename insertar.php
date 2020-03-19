@@ -118,9 +118,9 @@ Email	 	 : info@obedalvarado.pw
 	
 					</div>
 				</div>
-				<div>
-				  <label class="col-sm-3 control-label">*DN=Diccionario de Negocio</label>
-				   <label class="col-sm-3 control-label">*RN=Regla de Negocio</label>
+				<div class="form-group">
+				      <label class="col-sm-3 control-label">*DN=Diccionario de Negocio</label>
+				      <label class="col-sm-3 control-label">*RN=Regla de Negocio</label>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label">&nbsp;</label>
